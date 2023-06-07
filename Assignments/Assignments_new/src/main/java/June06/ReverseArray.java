@@ -1,16 +1,20 @@
 package June06;
 
+import java.util.Arrays;
+
 public class ReverseArray {
     public static void main(String args[]){
         int[] arr={2,3,6,7,8};
-        System.out.println("Initial Array:");
+        int[] result=new int[arr.length];
+        System.out.println("Initial Array:"+Arrays.toString(arr));
         for(int i=0;i<arr.length;i++){
-            System.out.println(arr[i]);
+
+            result[i] = arr[arr.length-i-1];
+
         }
-        System.out.println("Reversed Array:");
-        for(int i=arr.length-1;i>=0;i--){
-            System.out.println(arr[i]);
-        }
+        System.out.println("Reverse array:" +Arrays.toString(result));
+
+
     }
 
 }
